@@ -1,5 +1,5 @@
 # R-Basics
-📌Web sites recommended:
+📌 Recommended web sites:
 - https://www.w3schools.com/r/default.asp
 - https://www.geeksforgeeks.org/r-language/r-tutorial/
 - https://bookdown.org/rdpeng/rprogdatascience/getting-started-with-r.html
@@ -34,3 +34,29 @@ Websites for installation of R and R Studio:
 - https://posit.co/download/rstudio-desktop/ for R Studio
 
 📍 Introduction of R Studio!!
+
+## 📌 Recommended R sources:
+
+### Video series
+
+-Freecodecamp Intro to R (Useful channel for all languages) —> https://www.youtube.com/watch?v=_V8eKsto3Ug
+
+-Comprehensive statistics with R —> https://youtube.com/playlist?list=PLqzoL9-eJTNBDdKgJgJzaQcY6OXmsXAHU&si=VOr6rrj8jKwxuDZL
+
+
+### Courses
+
+-Harvard Cs50 introduction to Programming with python —> https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python?index=product&queryID=3cce7b5d9a7985b50985f3852ea630a3&position=2&results_level=first-level-results&term=cs50&objectID=course-2cc794d0-316d-42f7-bbfd-25c34e4cd5df&campaign=CS50%27s+Introduction+to+Programming+with+Python&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch
+
+-Harvard Cs50 Introduction to Programming with R 
+
+-Harvard Data Science R Basics —> https://www.edx.org/learn/r-programming/harvard-university-data-science-r-basics?index=product&queryID=2a4db0d5d07413cde06e8336b06888c9&position=1&results_level=first-level-results&term=R&objectID=course-91f52ef3-fa3f-4934-9d19-8d5a32635cd4&campaign=Data+Science%3A+R+Basics&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch
+
+-Harvard Statistics and R —> https://www.edx.org/learn/r-programming/harvard-university-statistics-and-r?index=product&queryID=ade75f798565b5361fc48dfaf9e77aad&position=2&results_level=first-level-results&term=R&objectID=course-94796bd2-6c39-4189-96ac-fce68e613c57&campaign=Statistics+and+R&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch
+
+-Stanford Online R programming fundamentals
+
+-Stanford Online Statistical Learning with R
+
+-IBM Programming basics for Data Science (IBM courses provide free videos but assignments are generally locked)
+
