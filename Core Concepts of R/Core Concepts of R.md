@@ -59,8 +59,7 @@ _class <- "senior"
 ## 📙Data Types
 Data type refers to the kind of data that is stored in a variable. Data type can be detected by "class()" function.
 ### 🔴 Numeric Data
-- Numeric data represents numbers that can be either decimals or integers.
-- ıt is the default type for numbers in R.
+Numeric data represents numbers that can be either decimals or integers. ıt is the default type for numbers in R.
 ```r
 num1 <- 47
 num2 <- 6.79
@@ -86,7 +85,7 @@ round(4.8267, 2)
 round(4.8267)
 ```
 ### 🟠 Integer Data
-Integer data describes set of integers stored in a variable. They are represented with a capital "L" at the end of the number. Numeric data can be converted to Integer data via as.() function.
+Integer data describes set of integers stored in a variable. They are represented with a capital "L" at the end of the number. Numeric data can be converted to Integer data via "as.() function".
 ```r
 int1 <- 7L
 int1
@@ -106,12 +105,39 @@ comp <- 4i+36
 class(comp)
 ```
 ### 🟢 Character Data
+Character data represents texts or words enclosed in quotation marks ("). It can store strings which involves alphabets, numbers, and symbols. 
+```r
+word <- "apple"
+sentence <- "I eat apple."
 
+class(word)
+class(sentence)
+```
+Strings can be converted to numeric data via "as.() function" if it composed of numbers
+```r
+str <- "100"
+class(str)
+is.character(str)
 
+num <- as.numeric(str)
+class(num)
+is.character(num)
+```
+```r
+# Given functions can be used for character data. Remind that not all functions are listed below. You can always check literature for more examples.
 
+# nchar() --> counts number of characters
+nchar("apple")
 
+#toupper() --> converts to uppercase
+toupper("apple")
 
+#substr() --> extracts a given part of the string
+substr("apple", 2, 4)
 
+#paste() --> combines strings together
+paste("apple", ", banana")
+```
 
 
 
