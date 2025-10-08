@@ -24,7 +24,7 @@ The base R system can be accessed through the "Comprehensive R Archive Network (
 
 Conceptually, the R system contains two main parts:
 - *The "base" R system* which is directly downloaded from CRAN and includes fundamental components required to run codes on R.
-- *Other packages and extentions* which further extends R's performance. R is supported by not only over 4000 packages available on CRAN but also packages created by users and available on personal websites such as GitHub.
+- *Other packages and extentions* which further extends R's performance. R is supported by not only over 10000 packages available on CRAN but also packages created by users and available on personal websites such as GitHub.
 
 There are also many packages available related with the "Bioconductor Project" which is basically specialized to bioinformatics and involves a collecition of packages and tools for analyzing biological and genomic data. 
 
