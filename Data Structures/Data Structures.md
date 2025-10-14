@@ -42,6 +42,7 @@ sort(even_num, decreasing = TRUE)
 ## 📗 Lists
 - Lists are one-dimentional data structures that stores data from different types.
 - A list can store matrix, vectors, characters...
+- Lists are created by **"list()"** funciton and the components of the lists are seperated by comma (,).
 ```r
 # Create vectors and variables
 studentId <- c(101, 102, 103)
@@ -64,7 +65,58 @@ print(studentList$Names)
 
 # Access specific student’s grade
 print(studentList$Grades[2])
-`
+```
+## 📙 Data Frames
+- Data frames store tabular data—similar to spreadsheets or database tables.
+- A data frame is essentially a list of equal-length vectors, where each column can have a different data type such as numeric, character, logical...
+It consists of three main components:
+**Data:** the actual values stored in cells
+**Rows:** observations or records
+**Columns:** variables or features
+- Data frames are created with **"data.frame()** function.
+```r
+student_data <- data.frame(
+  student_id = c(1:4),
+  student_name = c("Ece", "Berk", "Selin", "Mert"),
+  stringsAsFactors = FALSE
+)
+print(student_data)
+```
+```r
+# Given functions can be used with data frames. Note that there are more and more functions available for data frames, you can check.
+
+# str() --> gives a brief summary.
+str(student_data)
+
+# summary() --> gives a statistical summary of numeric colums.
+summary(student_data)
+
+# dim() --> gives dimentions of the data.
+dim(student_data)
+
+# rbind() --> add rows to the data frame.
+new_student <- c(5, "Kaan")
+student_data <- rbind(student_data, new_student)
+
+#cbind() --> add columns to the data frame.
+gender <- c("F", "M", "F", "M", "M")
+student_data <- cbind(student_data, gender)
+colnames(student_data)[ncol(student_data)] <- "gender"
+print(student_data)
+
+# Extract data from a data frame
+names_col <- data.frame(student_data$student_name)
+print(names_col)
+
+# Add new colums to the data frame
+student_data$grade <- c(100, 70, 85, 65, 90)
+print(student_data)
+
+# Access columns using $, single [ ], or double [[ ]].
+print(student_data[1])         
+print(student_data[["grade"]]) 
+print(student_data$student_name)
+```
 
 
 
