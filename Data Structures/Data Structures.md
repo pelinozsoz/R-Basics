@@ -7,7 +7,7 @@ They can hold various types of values collectively.
 - The index of a vector starts from "1", not "0".
 - Vectors are created by **"c()"** funciton and the components of the vectors are seperated by comma (,).
 ```r
-fruits <- c"(banana", "apple", "melon")
+fruits <- c("banana", "apple", "melon")
 # class() --> to determine how R interprets the object.
 class(fruits)
 # typeof() --> to determine what is stored in the object.
