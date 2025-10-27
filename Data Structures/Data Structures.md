@@ -73,7 +73,7 @@ It consists of three main components:
 **Data:** the actual values stored in cells
 **Rows:** observations or records
 **Columns:** variables or features
-- Data frames are created with **"data.frame()** function.
+- Data frames are created with **"data.frame()"** function.
 ```r
 student_data <- data.frame(
   student_id = c(1:4),
@@ -116,6 +116,98 @@ print(student_data)
 print(student_data[1])         
 print(student_data[["grade"]]) 
 print(student_data$student_name)
+```
+## 📕 Matrices
+- A matrix is a 2-dimensional data structure that contains elements of the same data type (Homogeneous).
+Matrices are composed of 2 main components:
+**Columns:** The ones that run vertically.
+**Rows:** The ones that run horizontally
+- Matrices are created with **"matrix()"** function. This function takes a group of values (a vector) and arranges them into a rectangular table with a specific number of rows and columns.
+- By default, R fills the matrix column by column — not row by row.
+```r
+numbers = matrix(
+  c(5, 10, 15, 20, 25, 30, 35, 40, 45, 50), 
+  nrow = 2,   
+  ncol = 5,                  
+)
+print(numbers)
+```
+```r
+# Given functions can be used with matrices. Note that there are more and more functions available for matrices, you can check.
+
+# Access data using single [ ].
+# Access a single component by m[i, j].
+print(numbers[1,4])
+
+# Access a row component by m[i, ].
+print(numbers[2, ])
+
+# Access a column component by m[ ,j].
+print(numbers[ ,4])
+
+#t() --> transposes of a matrix (flip rows and columns).
+print(t(numbers))
+
+# Modify elements.
+numbers[2,5] <- 100
+```
+
+## 📒 Arrays
+- Arrays are data structures that store elements in a fixed number of dimensions.
+- They are stored sequentially in memory, which makes them efficient for computation and data storage.
+- Array must be composed from the same data types (Homogeneous)
+**Vectors:** In R programming, vectors are one-dimentional arrays.
+**Matrices:** In R programming, matrices are two-dimentional arrays.
+**Multi-dimentional arrays:** In R programming, arrays can hold multi-dimentional data.
+- By default, R fills the arrays column by column — not row by row.
+- Arrays are created with **"array()"** function.
+```r
+# One-dimentional arrays:
+D1_array <- c("banana", "melon", "strawberry")
+
+# Two-dimentional arrays:
+D2_array <- numbers = matrix(
+  c(5, 10, 15, 20, 25, 30, 35, 40, 45, 50), 
+  nrow = 2,   
+  ncol = 5,                  
+)
+
+# Multi-dimentional arrays (Three-dimentional):
+scores <- 1:12  # 12 numbers for 3*2*2 array
+ 
+exam_array <- array(scores, dim = c(3, 2, 2),
+                      dimnames = list(
+                          Students = c("Ali", "Ece", "Mehmet"),
+                          Subjects = c("Math", "Science"),
+                          Semester = c("Sem1", "Sem2")
+                      ))
+  
+print(exam_array)
+
+, , Semester = Sem1
+
+        Subjects
+Students Math Science
+  Ali       1       4
+  Ece       2       5
+  Mehmet    3       6
+
+, , Semester = Sem2
+
+        Subjects
+Students Math Science
+  Ali       7      10
+  Ece       8      11
+  Mehmet    9      12
+```
+```r
+# Given functions can be used with arrays. Note that there are more and more functions available for arrays, you can check.
+
+[i,j,k], slices [, , k] --> to access
+
+sum(), mean(), apply(), rowSums(), colMeans() --> Math
+
+as.vector(), as.matrix() --> Conversion:
 ```
 
 
