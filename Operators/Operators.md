@@ -75,7 +75,7 @@ x <- 10
 # = --> Another way to assign value
 z = 20
 ```
-# 🗂️ Miscellaneous Operators
+## 🗂️ Miscellaneous Operators
 Miscellaneous Operators other useful operators used in R.
 ```r
 # : --> Sequence operator
