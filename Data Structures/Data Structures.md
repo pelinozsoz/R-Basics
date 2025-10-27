@@ -203,11 +203,57 @@ Students Math Science
 ```r
 # Given functions can be used with arrays. Note that there are more and more functions available for arrays, you can check.
 
-[i,j,k], slices [, , k] --> to access
+[i,j,k], slices [, , k] --> to access a component
 
-sum(), mean(), apply(), rowSums(), colMeans() --> Math
+sum(), mean(), apply(), rowSums(), colMeans() --> for mathematical calculations
 
-as.vector(), as.matrix() --> Conversion:
+as.vector(), as.matrix() --> for conversion of arrays
+```
+## 📔 Factors
+- Factors are special data structures used to represent categorical variables.
+- They are stored as integers in R programming.
+- In a factor, the data can have only the fixed values (limited number of values) called *"levels"*.
+You can understand the logic by blood type classification. As you may see, the only possible values (levels) are *"A, B, AB, and 0"*.
+Key Attributes of a Factor
+**"x"** – The input vector that will be converted into a factor.
+**"levels"** – The unique categories or distinct values represented in the factor.
+**"labels"** – The descriptive names assigned to each level.
+**"exclude"** – Specifies any values that should be omitted when creating the factor.
+**"ordered"** – Indicates whether the levels should follow a specific order.
+**"nmax"** – Defines the maximum number of levels that the factor can have.
+- Arrays are created with **"factor()"** function.
+```r
+blood_types <- factor(c("A", "B", "A", "0"),
+               levels = c("A", "B", "A", "0"))
+print(blood_types)
+
+is.factor(blood_types)
+class(blood_types)
+
+# Some levels can be pre-ordered, you can tell R that your levels have a natural order.
+education <- factor(c("High School", "Bachelor", "Master", "PhD"),
+                    ordered = TRUE,
+                    levels = c("High School", "Bachelor", "Master", "PhD"))
+education
+```
+```r
+# Given functions can be used with arrays. Note that there are more and more functions available for arrays, you can check.
+
+# levels() --> shows or sets the levels of a factor.
+levels(education)
+
+# nlevels() --> returns the number of levels of a factor.
+nlevels(education)
+
+# summary() --> summarizes the counts of each level.
+summary(eduaction)
+
+# table() --> counts how many times each level appears.
+table(bllod_types)
+
+# interaction() --> creates combinations of multiple factors.
+combine_factors <- interaction(blood_type, education)
+combine_factors
 ```
 
 
