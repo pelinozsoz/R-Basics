@@ -65,3 +65,53 @@ BiocManager::install("Biostrings")
 library(Biostrings)
 ```
 
+**2. Reading FASTA files**
+
+To import sequence data, use readDNAStringSet(). It reads a FASTA file and converts it into a structured R object.
+```r
+# Introduce your FASTA file
+fasta_path <- "path/to/your/file.fasta"
+# Convert the sequence to DNAStringSet object to use Biostrings functions
+your_dna_sequence <- readDNAStringSet(fasta_path)
+```
+
+**3. Calculation of Mononucleotide Conposition**
+
+To Counts how many times each nucleotide appears, use alphabetFrequency(). It Counts all letters in the sequence.
+```r
+# baseOnly = TRUE --> Only counts A, T, C, G, not N, gaps, etc.)
+alphabetFrequency(your_dna_sequence, baseOnly = TRUE)
+# To get proportions instead of counts, use as.prob = TRUE
+alphabetFrequency(your_dna_sequence, baseOnly = TRUE, as.prob = TRUE)
+```
+Important output!
+
+- If you have one sequence --> vector
+- If you have multiple sequences --> matrix
+
+**4. Calculation of k-mer Conpositions**
+
+To count all 2-letter combinations (2-mers), use dinucleotideFrequency().
+```r
+# Counts all possible combinations (16 total)
+dinucleotideFrequency(your_dna_sequence)
+```
+
+To count all 3-letter combinations (3-mers), use trinucleotideFrequency().
+```r
+# Counts all possible combinations (64 total)
+trinucleotideFrequency(your_dna_sequence)
+```
+
+For counting different k-mer compositions, use oligonucleotideFrequency().
+```r
+# General version of k-mer counting
+oligonucleotideFrequency(your_dna_sequence, width = k)
+```
+
+**5. Final Steps**
+
+- Convert your output into a data frame, merge data for different sequences.
+- Save your results to a file, you can use write.csv function for that.
+
+
